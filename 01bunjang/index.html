@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>번개장터</title>
+    <link rel="icon" href="img/fav_bj.ico" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--CSS 파일 연결-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container t_hd d-flex justify-content-center mt-3 mb-3">
+      <div class="container top d-flex justify-content-between">
+        <ul class="d-flex gap-3">
+          <li>
+            <a href="#" class="d-flex gap-1">
+              <img src="img/logo_app.svg" alt="앱다운로드버튼 이미지" />
+              <span>앱다운로드</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="d-flex gap-1">
+              <img src="img/logo_star.svg" alt="즐겨찾기버튼 이미지" />
+              <span>즐겨찾기</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="d-flex gap-3 justify-content-end">
+          <li>
+            <a href="#" class="d-flex gap-1">로그인/회원가입</a>
+          </li>
+          <li>
+            <a href="#" class="d-flex gap-1">내상점</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="" />
+
+    <div
+      class="container d-flex justify-content-between align-items-center mt-5"
+    >
+      <!--로고-->
+      <a href="#" class="bg-info">
+        <img src="img/logo_bj.svg" alt="" />
+      </a>
+      <!--검색 입력 필드-->
+      <div class="search-box">
+        <input
+          type="text"
+          placeholder="상품명, 지역명, @상점명 입력"
+          style="width: 300px"
+        />
+        <!--돋보기 버튼-->
+        <button type="submit">🔍</button>
+      </div>
+      <div class="d-flex gap-2">
+        <a href="#">
+          <!--검색창-->
+          <img src="img/sell_btn.png" alt="" style="width: 25px" />
+          <span>판매하기</span>
+        </a>
+        <a href="#">
+          <img src="img/my_btn.png" alt="" style="width: 25px" />
+          <span>내상점</span>
+        </a>
+        <a href="#">
+          <img src="img/talk_btn.png" alt="" style="width: 25px" />
+          <span>번개톡</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="container d-flex align-items-center mt-4">
+      <!--햄버거 버튼-->
+      <div class="ham bg-warning" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p class="bg-info">번개장터 판매자센터</p>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+      integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
