@@ -12,6 +12,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!--CSS 파일 연결-->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -80,20 +84,155 @@
     </div>
 
     <div class="container d-flex align-items-center mt-4">
-      <!--햄버거 버튼-->
-      <div class="ham bg-warning" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="side_menu d-flex gap-2">
+        <!--햄버거 버튼-->
+        <div class="ham" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p class="bj_seller ml-2">번개장터 판매자센터</p>
       </div>
-      <p class="bg-info">번개장터 판매자센터</p>
     </div>
 
+    <div class="container mt-3">
+      <!-- Slider main container -->
+      <div class="swiper bg-info">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="img/banner_001.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/banner_002.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/banner_003.png" alt="" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <div class="bn_mid_qr position: absolute">
+        <img src="img/bj_qr.png" alt="" />
+        <div class="bn_mid_qrb"></div>
+      </div>
+
+      <div class="bn_mid_appDown">
+        <img src="img/banner_middle.png" alt="" />
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h4>오늘의 상품 추천</h4>
+    </div>
+
+    <div class="container bg-primary d-flex">
+      <div class="container sell_item bg-warning d-flex">
+        <img src="img/sell_001.png" class="card-img-top" alt="..." />
+        <div class="card-body bg-info">
+          <p class="card-text">다이아 하츄핑 서프라이즈 키링 판매</p>
+          <div class="d-flex justify-content-between">
+            <div>
+              <p><strong>35,000원</strong></p>
+            </div>
+            <div>
+              <p>5시간 전</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-flex">
+      <div class="container footer_info mt-3 d-flex">
+        <div class="info_lgtbox">
+          <div class="info_ceo fw-bold">번개장터(주) 사업자정보</div>
+          <div class="info_lgt">
+            대표이사 : 최재화, 강승현 | 개인정보보호책임자 : 박병성
+            <br />
+            사업자등록번호 : 113-86-45836 | 통신판매업신고 : 2019-서울서초-1126
+            <br />
+            호스팅서비스 제공자 : Amazon Web Service (AWS)
+            <br />
+            EMAIL : help@bunjang.co.kr | FAX : 02-598-8241
+            <br />
+            주소 : 서울특별시 서초구 서초대로 38길
+            12,7,10층(서초동,마제스타시티,힐스테이트 서리풀)
+            <br />
+            <a href="#" target="_blank" class="lgt_text">사업자정보 확인</a>
+            <p>
+              <strong
+                >번개장터(주)센터필드점 | 최재화,강승현 | 808-85-01905</strong
+              >
+            </p>
+            <p>
+              서울특별시 강남구 테헤란로 231,쇼핑몰동 1층
+              W124호(역삼동)(역삼동,센터필드)
+            </p>
+          </div>
+        </div>
+
+        <div class="info_rgtbox">
+          <div class="info_rgt lh-1">
+            <p>고객센터</p>
+            <p><strong>1670-2910</strong></p>
+            <p></p>
+            <p>운영시간 9시 - 18시 (주말/공휴일 휴무,점심시간 12시 - 13시)</p>
+            <div class="d-flex">
+              <p>공지사항 | 1:1 문의하기 | 자주 묻는 질문</p>
+              <!-- <p>1:1 문의하기</p>
+            <p>자주 묻는 질문</p> -->
+            </div>
+            <p><strong>우리은행 채무지급보증 안내</strong></p>
+            <p>
+              번개장터㈜는 회사가 직접 판매하는 상품에 한하여, 고객님의 현금
+              결제 금액에 대해 우리은행과 채무지급보증 계약을 체결하여
+              안전거래를 보장하고 있습니다.
+            </p>
+            <p>서비스 가입사실 확인</p>
+            <p>Ⓒ Bungaejangter. Inc All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p>　</p>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".swiper", {
+          loop: true, // 무한 반복
+          autoplay: {
+            delay: 4000, // 4초마다 자동 슬라이드
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      });
+    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
       integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
